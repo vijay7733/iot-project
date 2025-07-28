@@ -1,0 +1,38 @@
+-- MongoDB Collections Setup
+-- This is a reference for the collections structure
+
+-- Users Collection
+-- {
+--   "_id": ObjectId,
+--   "role": "admin" | "manager",
+--   "name": "Jane Doe",
+--   "email": "jane@example.com",
+--   "pin": "bcrypt_hash_here",
+--   "device_id": "optional",
+--   "status": "active",
+--   "assigned_rooms": ["R101", "R202"],
+--   "invited_by": "admin@example.com",
+--   "created_at": ISODate()
+-- }
+
+-- Rooms Collection
+-- {
+--   "_id": ObjectId,
+--   "room_id": "R101",
+--   "type": "Deluxe",
+--   "features": ["Wi-Fi", "AC", "TV"],
+--   "status": "available"
+-- }
+
+-- Access Logs Collection
+-- {
+--   "_id": ObjectId,
+--   "manager_id": "MGR007",
+--   "manager_name": "John Doe",
+--   "room_id": "R101",
+--   "timestamp": ISODate(),
+--   "status": "success" | "fail",
+--   "reason": "Valid access" | "Wrong PIN" | "Token expired",
+--   "method": "PIN + Token",
+--   "ip_address": "192.168.1.1"
+-- }
